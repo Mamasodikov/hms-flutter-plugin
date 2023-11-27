@@ -18,6 +18,10 @@ rootProject.allprojects {
         google()
         mavenCentral()
         maven { url 'https://developer.huawei.com/repo/' }
+
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
@@ -57,7 +61,8 @@ dependencies {
     implementation 'com.huawei.hms:ml-computer-vision-yoga-model:3.11.0.301'
 
     // Static Biometric Verification
-    implementation 'com.huawei.hms:ml-computer-vision-livenessdetection:3.11.0.301'
+    //    implementation 'com.huawei.hms:ml-computer-vision-livenessdetection:3.11.0.301'
+    implementation project(":libs")
 
     // Interactive Biometric Verification
     implementation 'com.huawei.hms:ml-computer-vision-interactive-livenessdetection:3.12.0.300'

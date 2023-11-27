@@ -1,0 +1,2 @@
+project(':libs').projectDir = new File(rootDir, 'android/libs/')
+include ':libs'

@@ -1,0 +1,4 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('ml-computer-vision-livenessdetection-3.11.0.301.aar'))
+artifacts.add("default", file('ml-computer-vision-livenessdetection-inner-3.11.0.301.aar'))
+artifacts.add("default", file('ml-computer-vision-livenessdetection-nodynamic-model-3.11.0.301.aar'))

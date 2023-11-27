@@ -16,6 +16,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:huawei_ml_body/huawei_ml_body.dart';
 import 'package:huawei_ml_body_example/screens/home.dart';
 
@@ -33,12 +34,13 @@ void main() async {
 }
 
 // TODO: Please implement your own 'Permission Handler'.
-Future<void> requestPermissions() async {
-  // This plugin needs some permissions to work properly.
-  // You are expected to handle these permissions to use this Demo.
 
-  // You can learn more about the required permissions from our official documentations.
-  // https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/assigning-permissions-0000001052789343?ha_source=hms1
+Future<Map<Permission, PermissionStatus>> requestPermissions() async {
+  Map<Permission, PermissionStatus> statuses = await [
+    Permission.camera,
+  ].request();
+
+  return statuses;
 }
 
 class MyApp extends StatefulWidget {
